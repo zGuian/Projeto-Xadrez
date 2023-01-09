@@ -41,9 +41,24 @@
             }
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if(peca(pos) == null)
+            {
+                return null;
+            }
+            else
+            {
+                Peca aux = peca(pos);
+                aux.posicao = null;
+                pecas[pos.linha, pos.coluna] = null;
+                return aux;
+            }
+        }
+
         public bool posicaoValida(Posicao pos)
         {
-            if (pos.linha < 0 || pos.linha >=linha || pos.coluna<0 || pos.coluna >=coluna)
+            if (pos.linha < 0 || pos.linha >=linha || pos.coluna<0 || pos.coluna >= coluna)
             {
                 return false;
             }
