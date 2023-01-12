@@ -4,9 +4,9 @@ using xadrez;
 
 namespace xadrez_console
 {
-    internal class Tela
+    class Tela
     {
-        public static void imprimiTabuleiro(Tabuleiro tab)
+        public static void imprimirTabuleiro(Tabuleiro tab)
         {
             for (int i = 0; i < tab.linha; i++)
             {
@@ -20,7 +20,7 @@ namespace xadrez_console
             Console.WriteLine("  a b c d e f g h");
         }
 
-        public static void imprimiTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
+        public static void imprimirTabuleiro(Tabuleiro tab, bool[,] posicoesPossiveis)
         {
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
