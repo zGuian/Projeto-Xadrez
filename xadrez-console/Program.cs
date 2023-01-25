@@ -40,15 +40,19 @@ namespace xadrez_console
                     catch (TabuleiroException e)
                     {
                         Console.WriteLine(e.Message);
+                        Console.Write("Digite qualquer tecla para voltar! ");
                         Console.ReadLine();
                     }
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
             Console.WriteLine();
+        
         }
     }
 }
